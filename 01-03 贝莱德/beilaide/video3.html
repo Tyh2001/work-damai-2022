@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新年新“基”遇，2022港股怎么投？</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <video width="100%" src="http://r56fj9tuo.bkt.clouddn.com/video3.mp4" controls="controls" loop="loop"
+    autoplay="autoplay" x5-playsinline="true" playsinline="true">
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script type="text/javascript" src="__ROOT__/jquery.min.js"></script>
+    <script>
+      // //微信公众号自定义分享
+      var url = encodeURIComponent(window.location.href.split('#')[0]);
+      var time = new Date().getTime();
+      var tp = "my";
+      $.ajax({
+        url: 'https://www.infinitymcn.com/wechat_share/public/index.php/home/share/share_do',
+        data: {
+          "url": url,
+          "time": time,
+          "tp": tp,
+        },
+        type: 'post',
+        dataType: "json",
+        success: function (data) {
+          if (data.status) {
+            wx.config({
+              debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+              appId: data.data.appid, // 必填，公众号的唯一标识
+              timestamp: data.data.timestamp, // 必填，生成签名的时间戳
+              nonceStr: data.data.nonceStr, // 必填，生成签名的随机串
+              signature: data.data.signature,// 必填，签名
+              jsApiList: ['updateAppMessageShareData'] // 必填，需要使用的JS接口列表
+            });
+
+            wx.ready(function () {
+              wx.updateAppMessageShareData({
+                title: document.title, // 分享标题
+                desc: '基金代码：A类014746/C类：014747，1月4日盛大发行！', // 分享描述
+                link: data.data.link_url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: 'https://infinitymcn.com/demo/auto/alert/banner.png', // 分享图标
+                success: function (res) {
+                  // alert(res)
+                },
+                fail: function (res) {
+                  // console.log('shibai')
+                  // console.log(res)
+                }
+              })
+            });
+          } else {
+            // alert(data.message)
+          }
+        },
+      });
+//微信公众号自定义分享
+    </script>
+</body>
+
+</html>
