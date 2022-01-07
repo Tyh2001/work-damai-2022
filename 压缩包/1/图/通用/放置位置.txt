@@ -1,0 +1,9 @@
+通用：
+alert_1    http://media.infinitymcn.com/auto/alert/alert_1.jpg
+alert_2    http://media.infinitymcn.com/auto/alert/alert_1.jpg
+alert_3    http://media.infinitymcn.com/auto/alert/alert_1.jpg
+
+banner_1    http://media.infinitymcn.com/auto/beilaide2/banner_1.jpg
+banner_2    http://media.infinitymcn.com/auto/beilaide2/banner_2.jpg
+banner_3    http://media.infinitymcn.com/auto/beilaide2/banner_3.jpg
+
