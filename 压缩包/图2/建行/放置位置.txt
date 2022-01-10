@@ -1,5 +1,0 @@
-建行：
-alert_1    http://media.infinitymcn.com/beilaide/alert/alert_1.png
-alert_2    http://media.infinitymcn.com/beilaide/alert/alert_2.png
-alert_3    http://media.infinitymcn.com/beilaide/alert/alert_3.png
-

@@ -60,7 +60,7 @@
                 { id: 16, title: '2020逐光前行：花旗年度投资展望', date: '2020年1月15日', source: 'https://www.infinitymcn.com/video/001.mp4', img: 'video_in_02.jpg', href: 'video.html', target: '_self' },
                 { id: 17, title: '波动市况,如何强化资产"免疫力"?', date: '2020年04月02日', source: 'https://www.infinitymcn.com/video/citi.mp4', img: 'video_in_03.jpg', href: 'video.html', target: '_self' },
                 { id: 18, title: '2021牛势再起：花旗年度投资展望', date: '2021年01月21日', source: 'https://www.infinitymcn.com/video/citi_02.mp4', img: 'video_in_04.jpg', href: 'video.html', target: '_self' },
-                { id: 19, title: '2022，整装待发，把脉新经济新赛道的投资方向', date: '2022年01月10日', source: 'http://media.infinitymcn.com/citivideo.mp4', img: 'video_in_05.jpg', href: 'video.html', target: '_self' }
+                { id: 19, title: '2022重整待发，把脉新经济新赛道的投资方向', date: '2022年01月10日', source: 'http://media.infinitymcn.com/citivideo.mp4', img: 'video_in_05.jpg', href: 'video.html', target: '_self' }
             ]
         };
         var comment = {

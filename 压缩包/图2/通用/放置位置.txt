@@ -1,7 +1,0 @@
-通用：
-alert_1    http://media.infinitymcn.com/auto/alert/alert_1.png
-alert_2    http://media.infinitymcn.com/auto/alert/alert_2.png
-alert_3    http://media.infinitymcn.com/auto/alert/alert_3.png
-
-
-
