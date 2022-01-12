@@ -1,0 +1,152 @@
+function set_size() {
+	var documentWidth = $('body').outerWidth(true);
+	$('.response_img').each(function() {
+		if (documentWidth > 640) $(this).attr('src', $(this).data('normal'));
+		else $(this).attr('src', $(this).data('640'));
+	});
+	$('body').css('font-size', documentWidth > 640 ? 16 : documentWidth / 640 * 24);
+}
+
+$(window).resize(set_size);
+set_size();
+
+function selectChange(currencyCode) {
+	if (currencyCode)
+		$('#currencyCode').prev().text($('#currencyCode option[value="' + currencyCode + '"]').text());
+	else {
+		currencyCode = $('#currencyCode option:selected').val();
+		$('#currencyCode').prev().text($('#currencyCode option:selected').text());
+	}
+	$.ajax({
+		url: 'https://landing.citibank.cn/CNGCB/aptc/rates/InitializeFXRate.do?currencyCode=' + currencyCode,
+		type: 'POST',
+		data: {currencyCode: currencyCode},
+		crossDomain: true,
+		dataType: 'html',
+		success: function(html) {
+			// dataType = html
+			var data = new Array;
+			$.each($(html).find('div.cT-divTableRow'), function() {
+				data.push($(this).html().replace(/<span.+?>/g, '<td>').replace(/<\/span>/g, '</td>').replace(/\n[\t\s]*/g, '').replace(/(<td)(>[\n\t\sA-Z]+<\/td>)/g, '$1 style="display:none;"$2'));
+			});
+			$('#currency_date').html(data_temp(data));
+
+			$('#date').text($(html).find('#header1 span').text().replace(/[^\d]+(\d+\/\d+\/\d+)/i, '$1'));
+
+			// dataType = text
+			// var startIndex = 0,
+			// 	searchText = '<div class="cT-divTableRow">',
+			// 	searchIndex,
+			// 	rs = new Array;
+			// while((searchIndex = html.indexOf(searchText, startIndex)) > -1) {
+			// 	var endIndex = html.indexOf('</div>', searchIndex),
+			// 		data = html.substring(searchIndex + searchText.length, endIndex);
+				// rs.push(data.replace(/<span.+?>/g, '<td>').replace(/<\/span>/g, '</td>').replace(/\n[\t\s]*/g, '').replace(/(<td)(>[\n\t\sA-Z]+<\/td>)/g, '$1 style="display:none;"$2'));
+			// 	startIndex = endIndex;
+			// }
+			// $('#currency_date').html(data_temp(rs));
+
+			// var dateTextStartIndex = html.indexOf('header1'),
+			// 	dateTextEndIndex = html.indexOf('</div>', dateTextStartIndex),
+			// 	dateSpanParent = html.substring(dateTextStartIndex, dateTextEndIndex),
+			// 	dateSpan = dateSpanParent.substring(dateSpanParent.indexOf('<span')),
+			// 	date = dateSpan.replace(/<span.+?>/, '').replace(/<\/span>/, '');
+			// $('#date').text(date.replace(/[^\d]+(\d+\/\d+\/\d+)/, '$1'));
+		}
+	});
+}
+
+if ($('#currencyCode').length > 0) selectChange();
+if ($('#next_video').length > 0) {
+	$('#next_video').html(function() {
+		var data = _.sortBy(video.data, 'id'),
+			singleVideo = data[data.length - 2];
+		return _.template('<a onclick="openVideoPopup(this, \'<%= source %>\')">下一个视频 &gt;<div class="video_img"><img src="<%= img %>" /></div><div class="description"><div class="title"><%= title %></div><div class="date"><%= date %></div></div></a><br><%= title %>')({
+			img: imagePath + singleVideo.img,
+			source: singleVideo.source.match(/^http/i)?(singleVideo.source):(ismobileandtablet() ? 'https://uat.onlinebanking.citi.com.cn' : 'http://www.citibank.com.cn') + singleVideo.source,
+			title: singleVideo.title,
+			date: singleVideo.date
+		});
+	});
+}
+if ($('#mainVideo').length > 0) {
+	var data = _.max(video.data, 'id');
+	if (data.source.match(/^http/i))
+		$('#mainVideo').attr('poster', imagePath + data.img).attr('src', data.source);
+	else
+		$('#mainVideo').attr('poster', imagePath + data.img).attr('src', (ismobileandtablet() ? 'https://uat.onlinebanking.citi.com.cn' : window.location.protocol + '//www.citibank.com.cn') + data.source);
+	$('#mainVideo_title').html(data.title);
+	$('#mainVideo_date').html(data.date);
+	window.setTimeout(function() {
+		document.getElementById('mainVideo').play();
+	}, 100)
+}
+
+function data_temp(data) {
+	var html = new Array,
+		showCurrencyCode = showCurrencyValue && showCurrencyValue.length > 0 ? showCurrencyValue : undefined,
+		topCurrencyCode = topCurrencyValue && topCurrencyValue.length > 0 ? topCurrencyValue : undefined;
+	html.push('<tr><td class="head">货币</td><td class="head" style="display:none;">代码</td><td class="head">产品</td><td class="head">买入价</td><td class="head">卖出价</td></tr>');
+	if (showCurrencyCode) {
+		for (var i = 0; i < data.length; i++) {
+			for (var j = 0; j < showCurrencyCode.length; j++) {
+				if (data[i].indexOf(showCurrencyCode[j]) > -1) {
+					html.push('<tr>' + data[i] + '</tr>');
+					break;
+				}
+			}
+		}
+	} else {
+		for (var i = 0; i < data.length; i++) {
+			html.push('<tr>' + data[i] + '</tr>');
+		}
+	}
+
+	if (topCurrencyCode) {
+		var sameCount = 0,
+			isSame = false;
+		for (var i = 0; i < topCurrencyCode.length; i++) {
+			isSame = false
+			for (var j = i + 1 + sameCount; j < html.length; j++) {
+				if (html[j].indexOf(topCurrencyCode[i]) > -1) {
+					if (isSame) sameCount++;
+					html.splice(i + 1 + sameCount, 0, html.splice(j, 1)[0]);
+					isSame = true;
+				}
+			}
+		}
+	}
+	return html.join('');
+}
+
+function openVideoPopup(tag, source) {
+	$('#video_popup').css({display:'block'});
+	$('#video_popup .description').html($(tag).find('.description').html());
+	document.getElementById('mainVideo').pause();
+	// $('#popupVideo').append('<video id="popupVideoVideo" src="' + source + '" poster="' + $(tag).find('.video_img img:first').attr('src') + '" controls></video>');
+	$('#popupVideo').append('<video id="popupVideoVideo" src="https://media.infinitymcn.com/citi_02.mp4" controls></video>');
+	window.setTimeout(function() {
+		document.getElementById('popupVideoVideo').play();
+	}, 100);
+}
+function closeVideoPopup() {
+	$('#video_popup').css({display:'none'});
+	$('#popupVideo video').remove();
+}
+
+function showTips(tag) {
+	$(tag).toggleClass('tips_show').next().toggle();
+}
+
+$('body').on('click', '.appFooterScrolBot', function () {
+    $(this).addClass('appFooterScrolTop').removeClass('appFooterScrolBot');
+    $(this).parents('.footerMenu').css({
+        height: 'auto'
+    })
+})
+$('body').on('click', '.appFooterScrolTop', function () {
+    $(this).addClass('appFooterScrolBot').removeClass('appFooterScrolTop');
+    $(this).parents('.footerMenu').css({
+        height: '16px'
+    })
+})
