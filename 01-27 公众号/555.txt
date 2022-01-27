@@ -175,13 +175,13 @@
     <section style="display: inline-block;vertical-align: top;width: 33.33%;height: auto;visibility: visible;">
       <section style="display: block;height: 0 !important;margin-top: -1px;">
         <img
-          src="https://mmbiz.qlogo.cn/mmbiz_png/icjcRgKUOfpIZxrEvs1KfFuAWk2OFPibo1iaNrHktsfGK5EkX1jib5OBpXVkEUWy915sp6Ncwsdv4icgAZxT1Fytlgg/0?wx_fmt=png?tp=webp"
+          src="https://mmbiz.qlogo.cn/mmbiz_png/icjcRgKUOfpIZxrEvs1KfFuAWk2OFPibo1Fmc47ydmQbRsicnoz6iaHPgvr9pxXd1vtdQdLEp78bMtgEzbKaaWWfuA/0?wx_fmt=png?tp=webp"
           data-type="png?tp=webp"
           style="border-width: 0px;border-style: initial;border-color: initial;opacity: 0;height: auto !important;width: auto !important;visibility: visible !important;"
           data-ratio="1.0977777777777777" data-w="225">
       </section>
       <svg
-        style="display: block;background-image: url(&quot;https://mmbiz.qlogo.cn/mmbiz_png/icjcRgKUOfpIZxrEvs1KfFuAWk2OFPibo1iaNrHktsfGK5EkX1jib5OBpXVkEUWy915sp6Ncwsdv4icgAZxT1Fytlgg/0?wx_fmt=png&quot;);background-size: 100% auto;background-repeat: no-repeat;margin-bottom: -1px;"
+        style="display: block;background-image: url(&quot;https://mmbiz.qlogo.cn/mmbiz_png/icjcRgKUOfpIZxrEvs1KfFuAWk2OFPibo1Fmc47ydmQbRsicnoz6iaHPgvr9pxXd1vtdQdLEp78bMtgEzbKaaWWfuA/0?wx_fmt=png&quot;);background-size: 100% auto;background-repeat: no-repeat;margin-bottom: -1px;"
         viewBox="0 0 1080 1019">
       </svg>
     </section>
