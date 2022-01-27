@@ -150,7 +150,7 @@
       </section>
       <svg
         style="display: block;background-image: url(&quot;https://mmbiz.qlogo.cn/mmbiz_png/icjcRgKUOfpIZxrEvs1KfFuAWk2OFPibo1Vwg8r5uku2XE0jicC9KL1gReO16XRX3Cib4y12VnibpmLUCvmbiclUMWpA/0?wx_fmt=png&quot;);background-size: 100% auto;background-repeat: no-repeat;margin-bottom: -1px;"
-        viewBox="0 0 1080 1019">
+        viewBox="0 0 1080 1001">
       </svg>
     </section>
   </section>
