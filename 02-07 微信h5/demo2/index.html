@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js' type='text/javascript'></script>
+  <script src="resource/js/common/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: InterstateMono, SimHei;
+    }
+
+    @font-face {
+      font-family: 'InterstateMono';
+      src: url('css/InterstateMono.ttf');
+    }
+
+    .wariningPageCont {
+      width: 85%;
+      padding-bottom: 20px;
+      background-color: #FFFFFF;
+      border: 7px solid #004785;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .wariningPageCont span {
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .wariningPageCont .text {
+      font-size: 14px;
+      line-height: 24px;
+      padding: 40px 20px 0;
+    }
+
+    .wariningPageCont .line {
+      height: 2px;
+      margin: 20px 15px 20px;
+      border-bottom: 1px solid #004785;
+    }
+
+    .TbtnGroup {
+      text-align: center;
+    }
+
+    .Tbtn {
+      display: inline-block;
+      margin: 10px 20px;
+      width: 76px;
+      background-color: #004785;
+      color: #FFFFFF;
+      height: 20px;
+      line-height: 21px;
+      padding-top: 2px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .text_cn {
+      font-size: 12.5px;
+      color: #004785;
+    }
+
+    .text_en {
+      font-size: 12.5px;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    .lg_text {
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    .colse {
+      background: url(img/close.png) no-repeat;
+      background-size: 25px;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+
+    .red_img {
+      width: 22px;
+      position: relative;
+      top: 2px;
+      left: 10px;
+    }
+
+    @media (min-width: 320px) and (max-width: 374px) {
+      .wariningPageCont {
+        width: 85%;
+        padding-bottom: 16px;
+        background-color: #FFFFFF;
+        border: 7px solid #004785;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .wariningPageCont span {
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .wariningPageCont .text {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 32px 16px 0;
+      }
+
+      .wariningPageCont .line {
+        height: 2px;
+        margin: 16px 12px 12px;
+        border-bottom: 1px solid #004785;
+      }
+
+      .TbtnGroup {
+        text-align: center;
+      }
+
+      .Tbtn {
+        display: inline-block;
+        margin: 10px 20px;
+        width: 76px;
+        background-color: #004785;
+        color: #FFFFFF;
+        height: 20px;
+        line-height: 21px;
+        padding-top: 2px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .text_cn {
+        font-size: 12.5px;
+        color: #004785;
+      }
+
+      .text_en {
+        font-size: 12.5px;
+        color: #000000;
+        margin-bottom: 10px;
+      }
+
+      .lg_text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .colse {
+        background: url(img/close.png) no-repeat;
+        background-size: 23px;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+
+      .red_img {
+        width: 18px;
+        position: relative;
+        top: 2px;
+        left: 10px;
+      }
+    }
+  </style>
+  <title>花旗银行财富管理</title>
+</head>
+
+<body style="background-color: #f2f2f2;">
+  <input name="jumpUrl" type="hidden" id="link" value=null />
+  <div class="wariningPageCont" id="wariningPageCont">
+    <div class="colse" onclick="clickNO();"></div>
+    <div class="innerCont">
+      <div class="innerCont">
+        <div class="text">
+          <div class="text_cn lg_text">正在打开活动页面, 请稍候...</div>
+          <div class="text_en lg_text">Loading to the program page, please wait...</div>
+
+          <div class="text_cn">您即将离开花旗网站, 前往第三方网站.</div>
+          <div class="text_en">You are now entering a third party site.</div>
+
+          <div class="text_cn">所有您在第三方网站提交的信息将由该网站依据其隐私、保密和安全条款执行并负责.</div>
+          <div class="text_en">All information you provide there will be subject to privacy, confidentiality, and
+            security terms of the applicable third party site.</div>
+        </div>
+        <div class="line"></div>
+        <div class="TbtnGroup">
+          <div class="Tbtn" onclick="clickNO();">NO否</div>
+          <div class="Tbtn" onclick="clickOK();">YES是</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function clickOK() {
+      window.location.href = sessionStorage.HQhref;
+    }
+    function clickNO() {
+      WeixinJSBridge.call('closeWindow');
+    }
+
+  </script>
+</body>
+
+</html>
