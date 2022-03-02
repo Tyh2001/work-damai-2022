@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/swiper-bundle.min.css">
   <title>速汇通</title>
 </head>
 
 <body>
   <!-- 电脑端 -->
   <div id="pc">
-    <img class="banner" src="./images/pc/banner.jpg">
+    <div class="banner">
+      <img class="banner" src="./images/pc/banner.png">
+    </div>
 
     <!-- 信息栏 -->
     <div class="honorific">
@@ -25,6 +28,34 @@
     <!-- 轮播图 -->
     <div class="rotation">
       <h1 class="title">如何使用花旗网上银行通过SWIFT转账<br />轻松完成跨境汇款</h1>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="sw-image" src="./images/pc/1.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="sw-image" src="./images/pc/2.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="sw-image" src="./images/pc/3.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="sw-image" src="./images/pc/4.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="sw-image" src="./images/pc/5.png">
+          </div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <!-- 阴影 -->
+      <div class="show"></div>
     </div>
 
     <!-- 全球 -->
@@ -92,6 +123,7 @@
   <!-- 手机端 -->
   <div id="phone"></div>
 
+  <script src="./js/swiper-bundle.min.js"></script>
   <script>
     const click = document.querySelectorAll('.click')
     click.forEach(element => {
@@ -106,6 +138,15 @@
         node.style.display = 'none'
         isShow = true
       })
+    })
+
+    new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
     })
   </script>
 </body>
