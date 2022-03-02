@@ -24,8 +24,15 @@
   color: #333333;
   line-height: 24px;
 }
+#pc .honorific .title {
+  font-size: 15px;
+  color: #333;
+}
 #pc .honorific .foot {
   text-align: right;
+  font-size: 15px;
+  margin-right: 10px;
+  color: #333;
 }
 #pc .rotation {
   width: 100%;
@@ -122,8 +129,8 @@
   box-sizing: border-box;
 }
 #pc .problem .ques-box .ques-item .ques-show {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-between;
 }
 #pc .problem .ques-box .ques-item .ques-show .ques-text {
@@ -133,6 +140,9 @@
   font-weight: 400;
   color: #056DAE;
   line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 #pc .problem .ques-box .ques-item .ques-show .click {
   font-size: 32px;
