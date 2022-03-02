@@ -1,6 +1,16 @@
+@font-face {
+  font-family: Interstate;
+  src: url('../font/Interstate.ttf'),
+    url('../font/Interstate\ Bold.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+.font {
+  font-family: 'Interstate';
 }
 
 #pc {
@@ -236,11 +246,10 @@
 
     .text {
       margin-top: 30px;
-      font-size: 16px;
+      font-size: 38px;
       font-family: SourceHanSansCN-Regular, SourceHanSansCN;
       font-weight: 400;
       color: #333333;
-      line-height: 24px;
       word-break: break-all;
     }
 
@@ -405,6 +414,14 @@
           color: #333;
           margin-top: 20px;
           font-size: 40px;
+
+          table {
+            tr {
+              td {
+                text-align: center;
+              }
+            }
+          }
         }
       }
     }
