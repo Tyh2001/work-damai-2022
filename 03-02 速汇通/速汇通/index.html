@@ -32,7 +32,7 @@
 
     <!-- 轮播图 -->
     <div class="rotation">
-      <h1 class="title title-font">如何使用花旗网上银行通过<span class="font">SWIFT</span>转账<br />轻松完成跨境汇款</h1>
+      <h1 class="title">如何使用花旗网上银行通过<span class="font">SWIFT</span>转账<br />轻松完成跨境汇款</h1>
       <p class="text">简单五步</p>
 
       <div class="swiper-container">
@@ -67,7 +67,7 @@
 
     <!-- 全球 -->
     <div class="global">
-      <h1 class="title title-font">花旗银行全球速汇通服务<br />目前仍可在<span class="font">17</span>个国家/地区使用</h1>
+      <h1 class="title">花旗银行全球速汇通服务<br />目前仍可在<span class="font">17</span>个国家/地区使用</h1>
       <p class="subtitle">包括中国在内，花旗银行全球速汇通服务仍可用于以下国家/地区的花旗银行账户：</p>
       <p class="country">
         <img class="country-img" src="./images/pc/country.png">
@@ -78,14 +78,14 @@
 
     <!-- 常见问题 -->
     <div class="problem">
-      <h1 class="title title-font">常见问题</h1>
+      <h1 class="title">常见问题</h1>
       <div class="ques-box">
         <div class="ques-item-box">
           <div class="ques-item">
             <div class="ques-show">
-              <span class="ques-text"><span>如何使用 <span class="font">SWIFT</span><span class="font">
-                    进行跨境汇款？</span></span>
-                <span class="click">+</span>
+              <span class="ques-text"><span>如何使用 <span class="font">SWIFT</span>
+                  进行跨境汇款？</span></span>
+              <span class="click">+</span>
             </div>
             <div class="click-show" style="display: none;"><span class="font">2022</span> 年
               <span class="font">2022</span> 年 <span class="font">4</span>月<span
@@ -110,21 +110,21 @@
               在此之前，请使用您之前用于创建速汇通收款人的账户详细信息及以下<span class="font">SWIFT</span>代码将澳大利亚花旗银行的账户创建为您的 <span
                 class="font">SWIFT</span> 转账收款人。
               <br><br>
-              <table border="1" cellspacing="0">
+              <table border="1" cellspacing="0" style="border: #d8d8d8;">
                 <thead>
                   <tr>
-                    <th>国家/地区</th>
-                    <th>银行名称</th>
-                    <th><span class="font">SWIFT</span> 代码</th>
-                    <th><span class="font">BSB</span>代码</th>
+                    <th class="t-border">国家/地区</th>
+                    <th class="t-border">银行名称</th>
+                    <th class="t-border"><span class="font">SWIFT</span> 代码</th>
+                    <th class="t-border"><span class="font">BSB</span>代码</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="font">AUSTRALIA</span></td>
-                    <td><span class="font">CITIGROUP PTY LIMITED</span></td>
-                    <td><span class="font">CITIAU2X</span></td>
-                    <td><span class="font">NA</span></td>
+                    <td class="t-border"><span class="font">AUSTRALIA</span></td>
+                    <td class="t-border"><span class="font">CITIGROUP PTY LIMITED</span></td>
+                    <td class="t-border"><span class="font">CITIAU2X</span></td>
+                    <td class="t-border"><span class="font">NA</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -201,7 +201,7 @@
 
     <!-- 轮播图 -->
     <div class="rotation">
-      <h1 class="title title-font">如何使用花旗网上银行通过<br /><span class="font">SWIFT</span>转账<br />轻松完成跨境汇款</h1>
+      <h1 class="title">如何使用花旗网上银行通过<br /><span class="font">SWIFT</span>转账<br />轻松完成跨境汇款</h1>
       <p class="text">简单五步</p>
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -231,7 +231,7 @@
 
     <!-- 全球 -->
     <div class="global">
-      <h1 class="title title-font">花旗银行全球速汇通服务<br />目前仍可在<span class="font">17</span>个国家/地区使用</h1>
+      <h1 class="title">花旗银行全球速汇通服务<br />目前仍可在<span class="font">17</span>个国家/地区使用</h1>
       <p class="subtitle">包括中国在内，花旗银行全球速汇通服务仍可用于以下国家/地区的花旗银行账户：</p>
       <p class="country">
         <img class="country-img" src="./images/phone/country.png">
@@ -243,7 +243,7 @@
 
     <!-- 常见问题 -->
     <div class="problem">
-      <h1 class="title title-font">常见问题</h1>
+      <h1 class="title">常见问题</h1>
       <div class="ques-box">
         <div class="ques-item">
           <div class="ques-show">
@@ -342,10 +342,12 @@
         const node = this.parentNode.parentNode.querySelector('.click-show')
         if (isShow) {
           node.style.display = 'block'
+          this.innerHTML = '-'
           isShow = false
           return
         }
         node.style.display = 'none'
+        this.innerHTML = '+'
         isShow = true
       })
     })
@@ -358,18 +360,6 @@
         clickable: true,
       }
     })
-
-    // const reg = /^[0-9a-zA-Z]+$/
-    // function changeFont (node) {
-    //   const reg = /^[0-9a-zA-Z]/gi
-    //   const res = node.replace(reg, `<span style="color: red">${node}</span>`)
-    //   // return res
-    // }
-    // const text = document.querySelector('.honorific .text').innerHTML
-    // console.log(changeFont(text))
-    // console.log(text)
-    // // const text = '12'
-    // console.log(text.match(reg))
   </script>
 </body>
 

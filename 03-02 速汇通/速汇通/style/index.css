@@ -149,7 +149,7 @@
 #pc .problem .ques-box .ques-item-box .ques-item {
   width: 570px;
   margin-left: 21px;
-  min-height: 100px;
+  min-height: 77px;
   border-radius: 4px;
   margin-top: 20px;
   border: 1px solid #056DAE;
@@ -178,6 +178,7 @@
   color: #056DAE;
   cursor: pointer;
   user-select: none;
+  font-family: "微软雅黑";
 }
 #pc .problem .ques-box .ques-item-box .ques-item .click-show {
   width: 100%;
@@ -211,12 +212,12 @@
   word-break: break-all;
 }
 #phone .honorific .title {
-  font-size: 15px;
+  font-size: 42px;
   color: #333;
 }
 #phone .honorific .foot {
   text-align: right;
-  font-size: 15px;
+  font-size: 42px;
   margin-right: 10px;
   color: #333;
 }
@@ -334,19 +335,17 @@
   justify-content: space-between;
 }
 #phone .problem .ques-box .ques-item .ques-show .click {
-  font-size: 90px;
+  font-size: 80px;
   color: #056DAE;
   cursor: pointer;
   user-select: none;
+  font-family: "微软雅黑";
 }
 #phone .problem .ques-box .ques-item .click-show {
   width: 100%;
   color: #333;
   margin-top: 20px;
   font-size: 40px;
-}
-#phone .problem .ques-box .ques-item .click-show table tr td {
-  text-align: center;
 }
 #phone .footer {
   width: 100%;
@@ -369,4 +368,9 @@
   #phone {
     display: none;
   }
+}
+.t-border {
+  border: 1px solid #d8d8d8;
+  padding: 5px 10px;
+  text-align: center;
 }
