@@ -153,53 +153,54 @@
 
     .ques-box {
       margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 1167px;
+      width: 1188px;
 
-      .ques-item {
-        width: 571px;
-        min-height: 94px;
-        border-radius: 4px;
-        margin-top: 20px;
-        border: 1px solid #056DAE;
+      .ques-item-box {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        padding: 14px;
-        box-sizing: border-box;
 
-        .ques-show {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-
-          .ques-text {
-            width: 430px;
-            font-size: 21px;
-            font-family: SourceHanSansCN-Regular, SourceHanSansCN;
-            font-weight: 400;
-            color: #056DAE;
-            line-height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          }
-
-          .click {
-            font-size: 32px;
-            color: #056DAE;
-            cursor: pointer;
-            user-select: none;
-          }
-        }
-
-        // 点击展示的
-        .click-show {
-          width: 100%;
-          color: #333;
+        .ques-item {
+          width: 570px;
+          margin-left: 21px;
+          min-height: 100px;
+          border-radius: 4px;
           margin-top: 20px;
+          border: 1px solid #056DAE;
+          padding: 14px;
+          box-sizing: border-box;
+          display: inline-block;
+
+          .ques-show {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .ques-text {
+              width: 430px;
+              font-size: 21px;
+              font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+              font-weight: 400;
+              color: #056DAE;
+              line-height: 22px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+
+            .click {
+              font-size: 32px;
+              color: #056DAE;
+              cursor: pointer;
+              user-select: none;
+            }
+          }
+
+          // 点击展示的
+          .click-show {
+            width: 100%;
+            color: #333;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -418,8 +419,6 @@
     }
   }
 }
-
-
 
 @media screen and (max-width:1000px) {
   #pc {
