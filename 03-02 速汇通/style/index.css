@@ -1,13 +1,20 @@
 @font-face {
   font-family: Interstate;
-  src: url('../font/Interstate.ttf'), url('../font/Interstate\ Bold.ttf');
+  src: url('../font/Interstate.ttf');
+}
+@font-face {
+  font-family: InterstateBold;
+  src: url('../font/Interstate\ Bold.ttf');
 }
 * {
   margin: 0;
   padding: 0;
 }
 .font {
-  font-family: 'Interstate';
+  font-family: 'Interstate' !important;
+}
+.title-font {
+  font-family: 'InterstateBold' !important;
 }
 #pc {
   min-width: 1200px;
