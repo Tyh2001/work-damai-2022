@@ -89,7 +89,7 @@
   background: linear-gradient(180deg, rgba(189, 189, 189, 0) 0%, #e0e0e0 100%);
 }
 #pc .problem {
-  height: 559px;
+  min-height: 559px;
   background: #FFFFFF;
 }
 #pc .problem .title {
