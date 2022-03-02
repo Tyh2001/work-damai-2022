@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[82],{2665:function(n,o,p){var e;void 0===(e=function(){"use strict";epub360.PlayerPlugins.push({config:{type:"Condition",template:"others"}})}.apply(o,[]))||(n.exports=e)}}]);
