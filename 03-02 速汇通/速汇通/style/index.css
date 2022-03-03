@@ -42,6 +42,7 @@
   color: #333333;
   line-height: 24px;
   word-break: break-all;
+  text-indent: 2em;
 }
 #pc .honorific .title {
   font-size: 15px;
@@ -75,12 +76,12 @@
   color: #333333;
   line-height: 24px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 #pc .rotation .swiper-container {
   width: 1100px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 #pc .rotation .swiper-container .swiper-wrapper .swiper-slide {
   width: 590px !important;
@@ -110,11 +111,11 @@
   font-weight: 400;
   color: #333333;
   line-height: 24px;
-  margin-top: 16px;
+  margin-top: 30px;
 }
 #pc .global .country {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 #pc .global .country .country-img {
   width: 683px;
@@ -149,7 +150,6 @@
 #pc .problem .ques-box .ques-item-box .ques-item {
   width: 570px;
   margin-left: 21px;
-  min-height: 77px;
   border-radius: 4px;
   margin-top: 20px;
   border: 1px solid #056DAE;
@@ -184,6 +184,15 @@
   width: 100%;
   color: #333;
   margin-top: 20px;
+  animation: show 0.9s;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #pc .footer {
   width: 100%;
@@ -318,6 +327,7 @@
   flex-direction: column;
   padding: 30px;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 #phone .problem .ques-box .ques-item .ques-show {
   width: 100%;
@@ -346,6 +356,15 @@
   color: #333;
   margin-top: 20px;
   font-size: 40px;
+  animation: show 0.9s;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #phone .footer {
   width: 100%;

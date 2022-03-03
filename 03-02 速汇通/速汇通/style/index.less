@@ -50,6 +50,7 @@
       color: #333333;
       line-height: 24px;
       word-break: break-all;
+      text-indent: 2em;
     }
 
     .title {
@@ -89,13 +90,13 @@
       color: #333333;
       line-height: 24px;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .swiper-container {
       width: 1100px;
       margin: auto;
-      margin-top: 40px;
+      margin-top: 60px;
 
       .swiper-wrapper {
 
@@ -134,12 +135,12 @@
       font-weight: 400;
       color: #333333;
       line-height: 24px;
-      margin-top: 16px;
+      margin-top: 30px;
     }
 
     .country {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
 
       .country-img {
         width: 683px;
@@ -180,7 +181,6 @@
         .ques-item {
           width: 570px;
           margin-left: 21px;
-          min-height: 77px;
           border-radius: 4px;
           margin-top: 20px;
           border: 1px solid #056DAE;
@@ -219,6 +219,17 @@
             width: 100%;
             color: #333;
             margin-top: 20px;
+            animation: show .9s
+          }
+
+          @keyframes show {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
           }
         }
       }
@@ -392,6 +403,7 @@
         flex-direction: column;
         padding: 30px;
         box-sizing: border-box;
+        transition: .3s;
 
         .ques-show {
           width: 100%;
@@ -424,6 +436,17 @@
           color: #333;
           margin-top: 20px;
           font-size: 40px;
+          animation: show .9s
+        }
+
+        @keyframes show {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
         }
       }
     }
