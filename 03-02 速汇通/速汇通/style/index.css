@@ -31,6 +31,7 @@
   height: 296px;
   margin: auto;
   margin-top: 67px;
+  text-align: justify;
 }
 #pc .honorific .text {
   margin-top: 30px;
@@ -128,6 +129,7 @@
 #pc .problem {
   min-height: 559px;
   background: #FFFFFF;
+  text-align: justify;
 }
 #pc .problem .title {
   text-align: center;
@@ -315,6 +317,7 @@
   justify-content: space-between;
   width: 80%;
   margin: auto;
+  text-align: justify;
 }
 #phone .problem .ques-box .ques-item {
   width: 100%;
@@ -389,7 +392,7 @@
   }
 }
 .t-border {
-  border: 1px solid #d8d8d8;
+  border: 0.5px solid #d8d8d8;
   padding: 5px 10px;
   text-align: center;
 }
