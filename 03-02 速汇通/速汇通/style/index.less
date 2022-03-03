@@ -172,67 +172,69 @@
 
     .ques-box {
       margin: auto;
-      width: 1188px;
+      width: 1100px;
+      display: flex;
+      justify-content: space-between;
 
       .ques-item-box {
-        display: flex;
-        align-items: center;
+        width: 540px;
+      }
 
-        .ques-item {
-          width: 570px;
-          margin-left: 21px;
-          border-radius: 4px;
-          margin-top: 20px;
-          border: 1px solid #056DAE;
-          padding: 14px;
-          box-sizing: border-box;
-          display: inline-block;
+      .ques-item {
+        width: 540px;
+        border-radius: 4px;
+        margin-top: 20px;
+        border: 1px solid #056DAE;
+        padding: 14px;
+        box-sizing: border-box;
+        display: inline-block;
 
-          .ques-show {
-            width: 100%;
+        .ques-show {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          .ques-text {
+            width: 430px;
+            font-size: 21px;
+            font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+            font-weight: 400;
+            color: #056DAE;
+            line-height: 22px;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-
-            .ques-text {
-              width: 430px;
-              font-size: 21px;
-              font-family: SourceHanSansCN-Regular, SourceHanSansCN;
-              font-weight: 400;
-              color: #056DAE;
-              line-height: 22px;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-            }
-
-            .click {
-              font-size: 32px;
-              color: #056DAE;
-              cursor: pointer;
-              user-select: none;
-              font-family: "微软雅黑";
-            }
           }
 
-          // 点击展示的
-          .click-show {
-            width: 100%;
-            color: #333;
-            margin-top: 20px;
-            animation: show .9s
+          .click {
+            font-size: 32px;
+            color: #056DAE;
+            cursor: pointer;
+            user-select: none;
+            font-family: "微软雅黑";
+          }
+        }
+
+        // 点击展示的
+        .click-show {
+          width: 100%;
+          color: #333;
+          margin-top: 20px;
+          animation: show .9s
+        }
+
+        @keyframes show {
+          0% {
+            opacity: 0;
           }
 
-          @keyframes show {
-            0% {
-              opacity: 0;
-            }
-
-            100% {
-              opacity: 1;
-            }
+          100% {
+            opacity: 1;
           }
         }
       }
+
+      // }
     }
   }
 
