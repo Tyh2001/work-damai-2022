@@ -127,7 +127,6 @@
 #pc .problem {
   min-height: 559px;
   background: #FFFFFF;
-  text-align: justify;
 }
 #pc .problem .title {
   text-align: center;
@@ -173,7 +172,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: justify;
 }
 #pc .problem .ques-box .ques-item .ques-show .click {
   font-size: 32px;
