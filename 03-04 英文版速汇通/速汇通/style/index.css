@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: InterstateBold;
-  src: url('../font/Interstate\ Bold.ttf');
+  src: url('../font/InterstateBold.ttf');
 }
 .font {
   font-family: 'Interstate' !important;
@@ -83,11 +83,11 @@
   position: relative;
 }
 #pc .rotation .swiper-container .swiper-wrapper .swiper-slide {
-  width: 790px !important;
+  width: 750px !important;
 }
 #pc .rotation .swiper-container .swiper-wrapper .swiper-slide .sw-image {
   margin-left: 90px;
-  width: 803px;
+  width: 761px;
 }
 #pc .global {
   height: 450px;
@@ -258,10 +258,10 @@
   margin-top: 40px;
 }
 #phone .rotation .swiper-container .swiper-wrapper .swiper-slide {
-  width: 530px !important;
+  width: 730px !important;
 }
 #phone .rotation .swiper-container .swiper-wrapper .swiper-slide .sw-image {
-  width: 603px;
+  width: 803px;
 }
 #phone .global {
   background: #FFFFFF;

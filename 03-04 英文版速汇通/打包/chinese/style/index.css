@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: InterstateBold;
-  src: url('../font/Interstate\ Bold.ttf');
+  src: url('../font/InterstateBold.ttf');
 }
 * {
   margin: 0;
@@ -266,10 +266,11 @@
   margin-top: 40px;
 }
 #phone .rotation .swiper-container .swiper-wrapper .swiper-slide {
-  width: 530px !important;
+  width: 750px !important;
 }
 #phone .rotation .swiper-container .swiper-wrapper .swiper-slide .sw-image {
-  width: 603px;
+  margin-left: 90px;
+  width: 761px;
 }
 #phone .global {
   background: #FFFFFF;
