@@ -6,15 +6,16 @@
   font-family: InterstateBold;
   src: url('../font/Interstate\ Bold.ttf');
 }
-* {
-  margin: 0;
-  padding: 0;
-}
 .font {
   font-family: 'Interstate' !important;
 }
 .title-font {
   font-family: 'InterstateBold' !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Interstate";
 }
 #pc {
   min-width: 1200px;
@@ -58,6 +59,7 @@
   width: 100%;
   background: #F6F6F6;
   padding-top: 70px;
+  font-family: "InterstateBold";
 }
 #pc .rotation .title {
   height: 100px;
@@ -104,6 +106,7 @@
   color: #333333;
   line-height: 50px;
   text-align: center;
+  font-family: "InterstateBold";
 }
 #pc .global .subtitle {
   text-align: center;
@@ -141,6 +144,7 @@
   color: #333333;
   line-height: 50px;
   margin-top: 60px;
+  font-family: "InterstateBold";
 }
 #pc .problem .ques-box {
   margin: auto;
@@ -177,6 +181,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: justify;
 }
 #pc .problem .ques-box .ques-item .ques-show .click {
   font-size: 32px;
@@ -224,6 +229,7 @@
   font-weight: 400;
   color: #333333;
   word-break: break-all;
+  text-align: justify;
 }
 #phone .honorific .title {
   font-size: 42px;
@@ -250,14 +256,14 @@
   text-align: center;
 }
 #phone .rotation .text {
-  height: 24px;
+  height: 34px;
   font-size: 36px;
   font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
   line-height: 24px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 #phone .rotation .swiper-container {
   width: 90%;
@@ -289,7 +295,7 @@
   font-weight: 400;
   color: #333333;
   text-align: center;
-  margin: 30px auto;
+  margin: 50px auto;
 }
 #phone .global .country {
   text-align: center;
@@ -350,6 +356,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: justify;
 }
 #phone .problem .ques-box .ques-item .ques-show .click {
   font-size: 80px;
