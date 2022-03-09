@@ -6,16 +6,15 @@
   font-family: InterstateBold;
   src: url('../font/InterstateBold.ttf');
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 .font {
   font-family: 'Interstate' !important;
 }
 .title-font {
   font-family: 'InterstateBold' !important;
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Interstate";
 }
 #pc {
   min-width: 1200px;
@@ -29,7 +28,7 @@
 }
 #pc .honorific {
   width: 1100px;
-  height: 370px;
+  height: 296px;
   margin: auto;
   margin-top: 67px;
   text-align: justify;
@@ -39,9 +38,12 @@
   width: 1100px;
   height: 96px;
   font-size: 16px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
   line-height: 24px;
+  word-break: break-all;
+  text-indent: 2em;
 }
 #pc .honorific .title {
   font-size: 15px;
@@ -55,21 +57,24 @@
 }
 #pc .rotation {
   width: 100%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding-top: 70px;
-  font-family: "InterstateBold";
 }
 #pc .rotation .title {
-  height: 100px;
+  height: 150px;
+  width: 600px;
+  display: inline-block;
+  margin: auto;
   font-size: 35px;
+  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
   color: #333333;
   line-height: 50px;
-  text-align: center;
 }
 #pc .rotation .text {
   height: 24px;
   font-size: 16px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
   line-height: 24px;
@@ -91,22 +96,23 @@
 }
 #pc .global {
   height: 450px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 #pc .global .title {
   height: 100px;
   font-size: 35px;
   margin-top: 70px;
+  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
   color: #333333;
   line-height: 50px;
   text-align: center;
-  font-family: "InterstateBold";
 }
 #pc .global .subtitle {
   text-align: center;
   height: 24px;
   font-size: 16px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
   line-height: 24px;
@@ -126,17 +132,18 @@
 }
 #pc .problem {
   min-height: 559px;
-  background: #FFFFFF;
+  background: #ffffff;
+  text-align: justify;
 }
 #pc .problem .title {
   text-align: center;
   height: 62px;
   font-size: 35px;
+  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
   color: #333333;
   line-height: 50px;
   margin-top: 60px;
-  font-family: "InterstateBold";
 }
 #pc .problem .ques-box {
   margin: auto;
@@ -151,7 +158,7 @@
   width: 540px;
   border-radius: 4px;
   margin-top: 20px;
-  border: 1px solid #056DAE;
+  border: 1px solid #056dae;
   padding: 14px;
   box-sizing: border-box;
   display: inline-block;
@@ -164,10 +171,11 @@
   justify-content: space-between;
 }
 #pc .problem .ques-box .ques-item .ques-show .ques-text {
-  width: 400px;
+  width: 430px;
   font-size: 21px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
-  color: #056DAE;
+  color: #056dae;
   line-height: 22px;
   display: flex;
   align-items: center;
@@ -175,10 +183,10 @@
 }
 #pc .problem .ques-box .ques-item .ques-show .click {
   font-size: 32px;
-  color: #056DAE;
+  color: #056dae;
   cursor: pointer;
   user-select: none;
-  font-family: "微软雅黑";
+  font-family: '微软雅黑';
 }
 #pc .problem .ques-box .ques-item .click-show {
   width: 100%;
@@ -214,9 +222,11 @@
 }
 #phone .honorific .text {
   margin-top: 30px;
-  font-size: 35px;
+  font-size: 38px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
+  word-break: break-all;
 }
 #phone .honorific .title {
   font-size: 42px;
@@ -230,25 +240,27 @@
 }
 #phone .rotation {
   width: 100%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding-top: 70px;
 }
 #phone .rotation .title {
   height: 280px;
   font-size: 54px;
+  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
   color: #333333;
   line-height: 74px;
-  text-align: center;
+  /* text-align: center; */
 }
 #phone .rotation .text {
-  height: 34px;
+  height: 24px;
   font-size: 36px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
   line-height: 24px;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 #phone .rotation .swiper-container {
   width: 90%;
@@ -256,17 +268,19 @@
   margin-top: 40px;
 }
 #phone .rotation .swiper-container .swiper-wrapper .swiper-slide {
-  width: 730px !important;
+  width: 750px !important;
 }
 #phone .rotation .swiper-container .swiper-wrapper .swiper-slide .sw-image {
-  width: 803px;
+  margin-left: 90px;
+  width: 761px;
 }
 #phone .global {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 #phone .global .title {
   font-size: 54px;
   margin-top: 70px;
+  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
   color: #333333;
   text-align: center;
@@ -275,10 +289,11 @@
   height: 24px;
   width: 80%;
   font-size: 36px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
   color: #333333;
   text-align: center;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 #phone .global .country {
   text-align: center;
@@ -293,11 +308,12 @@
   background: linear-gradient(180deg, rgba(189, 189, 189, 0) 0%, #e0e0e0 100%);
 }
 #phone .problem {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 #phone .problem .title {
   font-size: 54px;
   margin-top: 70px;
+  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
   color: #333333;
   text-align: center;
@@ -308,13 +324,14 @@
   justify-content: space-between;
   width: 80%;
   margin: auto;
+  text-align: justify;
 }
 #phone .problem .ques-box .ques-item {
   width: 100%;
   min-height: 160px;
   border-radius: 4px;
   margin-top: 20px;
-  border: 1px solid #056DAE;
+  border: 1px solid #056dae;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -331,18 +348,19 @@
 #phone .problem .ques-box .ques-item .ques-show .ques-text {
   width: 88%;
   font-size: 43px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
   font-weight: 400;
-  color: #056DAE;
+  color: #056dae;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 #phone .problem .ques-box .ques-item .ques-show .click {
   font-size: 80px;
-  color: #056DAE;
+  color: #056dae;
   cursor: pointer;
   user-select: none;
-  font-family: "微软雅黑";
+  font-family: '微软雅黑';
 }
 #phone .problem .ques-box .ques-item .click-show {
   width: 100%;
