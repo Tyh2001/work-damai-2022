@@ -62,9 +62,8 @@
 }
 #pc .rotation .title {
   height: 150px;
-  width: 600px;
-  display: inline-block;
-  margin: auto;
+  text-align: center;
+  /* display: inline-block; */
   font-size: 35px;
   font-family: SourceHanSansCN-Bold, SourceHanSansCN;
   font-weight: bold;
@@ -250,7 +249,7 @@
   font-weight: bold;
   color: #333333;
   line-height: 74px;
-  /* text-align: center; */
+  text-align: center;
 }
 #phone .rotation .text {
   height: 24px;
