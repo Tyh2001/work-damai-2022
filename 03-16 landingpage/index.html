@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner,
+    .banner img {
+      width: 781px;
+      margin: auto;
+      position: relative;
+    }
+
+    .banner .click {
+      display: inline-block;
+      position: absolute;
+      width: 22%;
+      height: 2%;
+      right: 8%;
+      bottom: 5%;
+      cursor: pointer;
+    }
+
+    .box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .box .content {
+      width: 600px;
+      height: 45%;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      overflow-y: auto;
+      padding: 40px;
+      box-sizing: border-box;
+      word-break: break-all;
+    }
+
+    .title {
+      color: rgb(127, 127, 127);
+      line-height: 20px;
+      font-size: 16px;
+    }
+
+    .box ol {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: rgb(127, 127, 127);
+    }
+
+    .box .content .close {
+      user-select: none;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 1100px) {
+
+      .box .content {
+        width: 80%;
+        height: 45%;
+      }
+
+      .box ol {
+        font-size: 18px;
+      }
+
+      .banner,
+    .banner img {
+      width: 100%;
+      position: relative;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <img src="./image/banner.jpg" alt="">
+    <span class="click"></span>
+  </div>
+
+  <div class="box" onclick="onClose()" style="display: none;">
+    <div class="content">
+      <p align="right" class="close" onclick="onClose()">X</p>
+      <strong class="title">活动条款：</strong>
+      <br>
+      <br>
+      <ol>
+        <li>
+          <p>合格花旗财富管理菁英账户：综合账户总额*当月日均余额介于人民币300万元（含）与500万元（不含）之间（或等值外币）。</p>
+          <p>合格花旗财富管理尊选账户：综合账户总额*当月日均余额介于人民币500万元（含）与800万元（不含）之间（或等值外币）。</p>
+          <p>合格花旗私享家账户：综合账户总额*日平均余额不低于人民币800万元（或等值外币），且账户类型为私享家账户。</p>
+          <p>综合账户总额*日平均余额不低于人民币800万元（或等值外币）的花旗财富管理账户参考合格花旗财富管理尊选账户执行。</p>
+          <p>
+            若综合账户总额日平均余额*不符合账户管理费免除条件，将收取账户管理费，且相应的产品和服务费率标准将适用相应收费标准。具体账户管理费免除条件详情请登录花旗银行网站查阅《花旗银行（中国）有限公司个人银行基本业务费率表》https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm
+          </p>
+          <p>*当月综合账户总额日均余额的计算为同一客户号码项下的所有个人及联名账户(联名账户的账户余额仅计入主账户人名下)
+            当月内每日存款、投资及指定保险产品的累积余额**的总和，除以当月实际天数得到的平均数。指定保险产品包含非投资连结及投资连结的保险产品。</p>
+          <p>**当季度综合账户总额日均余额的计算为同一客户号码项下的所有个人及联名账户(联名账户的账户余额仅计入主账户人名下)
+            当季度内每日存款、投资及指定保险产品的累积余额**的总和，除以当季度实际天数得到的平均数。指定保险产品包含非投资连结及投资连结的保险产品。</p>
+          <p>
+            ***非投资连结保险产品的累积余额为已缴保费及应缴保费；投资连结的保险产品的累积余额为保单当月的余额。客户在持有以下产品期间将获得账户管理费的豁免：房贷或保险产品。联名账户的账户余额将一并计入主账户人名下，主账户人为礼品获赠人。
+          </p>
+        </li>
+        <li>如遇礼品库存不足的情况，礼品的发放会出现延迟。如出现礼品停产、停售或生产商无货供应等情况，礼品将更换为同等价值和功能的其它产品。</li>
+        <li>
+          以上活动中涉及的商品或服务，由服务商、第三方商户或供应商提供，并受制于其相关条款和条件。客户应自行决定是否使用该服务商、第三方商户或供应商提供的商品或服务，并应自行承担使用该商品或服务的后果。并且，客户同意，为使用该等商品或服务之目的，客户需要将个人信息披露给服务商、第三方商户或供应商。若客户因使用有关商品或服务引起任何损害的，客户可自行直接接洽该服务商、第三方商户或供应商予以处理和解决。除适用法律另有规定外，花旗银行（中国）有限公司不对该服务商、第三方商户或供应商提供的商品或服务的质量提供任何保证或承担任何责任，但可视具体情况提供必要协助。
+        </li>
+        <li>如客户在活动期间或领取礼程/积分/礼遇后发生任何欺诈或恶意套取礼程/积分/礼遇等行为，我行有权取消其获取礼程/积分/礼遇的资格，并从其在我行的任何银行卡和/或账户中扣除与其所获得的礼程/积分/礼遇等值金额的款项。
+        </li>
+        <li>本活动礼品不可兑换现金或替换为其他优惠或商品。</li>
+        <li>本活动条款及细则所述“花旗”或“花旗银行”或“我行”指花旗银行（中国）有限公司。在法律允许的范围内，花旗银行（中国）有限公司保留暂停或终止活动、解释或修改本活动之条款和细则。</li>
+        <li>若对我们的服务及产品有任何疑问、建议或投诉，请拨打花旗24小时服务热线：95038或400-821-1880。</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    const box = document.querySelector('.box')
+    document.querySelector('.click').addEventListener('click', () => {
+      box.style.display = 'block'
+    }, false)
+
+    function onClose () {
+      box.style.display = 'none'
+    }
+  </script>
+</body>
+
+</html>
