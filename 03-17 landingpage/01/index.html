@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+    }
+
+    .pc {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width:1100px) {
+      .pc {
+        display: none;
+      }
+
+      .phone {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width:1100px) {
+      .pc {
+        display: block;
+      }
+
+      .phone {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="pc">
+    <img src="./images/pc/1.png" alt="">
+    <img src="./images/pc/2.png" alt="">
+    <img src="./images/pc/3.png" alt="">
+  </div>
+
+  <div class="phone">
+    <img src="./images/phone/01.png" alt="">
+    <img src="./images/phone/02.png" alt="">
+    <img src="./images/phone/03.png" alt="">
+  </div>
+</body>
+
+</html>
